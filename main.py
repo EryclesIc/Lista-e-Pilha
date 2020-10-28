@@ -18,7 +18,7 @@ def novo_elem():
 
 
 print("Olá, escolha qual estrutura deseja utilizar:")
-print("1- Lista")
+print("1- Lista encadeada")
 print("2- Pilha")
 escolha = int(input())
 
