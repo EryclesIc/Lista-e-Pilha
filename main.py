@@ -3,7 +3,7 @@ from linkedlist import LinkedList
 
 def novo_elem():
     print("Digite o elemento que deseja adicionar:")
-    elemento = int(input())
+    elemento = input()
     lista.append(elemento)
     print("O {} foi adicionado a lista".format(lista[0]))
     print("A lista agora tem o tamanho {}.".format(len(lista)))
