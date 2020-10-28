@@ -5,8 +5,8 @@ def novo_elem():
     print("Digite o elemento que deseja adicionar:")
     elemento = input()
     lista.append(elemento)
-    print(lista[0])
-    print(len(lista))
+    print("O {} foi adicionado a lista".format(lista[0]))
+    print("A lista agora tem o tamanho {}.".format(len(lista)))
     print("Deseja adicionar outro elemento?")
     print("1- Sim")
     print("2- Não")
@@ -34,9 +34,3 @@ if escolha == 1:
         pass
 else:
     print("Você entrou na pilha!")
-
-# lista = LinkedList()
-# lista.append(7)
-# lista.append(56)
-# lista.append(80)
-# print(lista.index(80))
