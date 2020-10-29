@@ -28,7 +28,7 @@ class LinkedList:
         # a = lista.get(6)
         pass
 
-    def set(self, indez, elem):
+    def set(self, index, elem):
         # lista.set(5, 9)
         pass
 
