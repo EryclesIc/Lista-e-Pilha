@@ -27,6 +27,8 @@ class Stack:
         if self._size > 0:
             return self.top.data
         raise IndexError("The stack is empty")
+    def __repr__(self):
+        return "[" + str(self.top)
 
 # stack = Stack()
 # stack.push(1)

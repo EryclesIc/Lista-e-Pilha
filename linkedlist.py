@@ -79,7 +79,7 @@ class LinkedList:
         r = ""
         pointer = self.head
         while pointer:
-            r = r + str(pointer.data) + "-->"
+            r = r + str(pointer.data) + "\n"
             pointer = pointer.next
         return r
 
