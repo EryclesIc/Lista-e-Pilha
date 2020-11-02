@@ -55,7 +55,7 @@ def novo_elem(estrutura):
         print("A lista agora tem o tamanho {}.".format(len(lista)))
         print("Deseja adicionar outro elemento?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             novo_elem(1)
@@ -68,7 +68,7 @@ def novo_elem(estrutura):
         print("A pilha agora tem o tamanho {}.".format(stack._size))
         print("Deseja adicionar outro elemento?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             novo_elem(2)
@@ -81,7 +81,7 @@ def visualizar_lista(estrutura):
         print("A lista agora tem o tamanho {}.".format(len(lista)))
         print("Deseja visualizar a lista novamente?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             visualizar_lista(1)
@@ -93,7 +93,7 @@ def visualizar_lista(estrutura):
         print("A pilha agora tem o tamanho {}.".format(stack._size))
         print("Deseja visualizar a pilha novamente?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             visualizar_lista(2)
@@ -110,7 +110,7 @@ def apagar_elem(estrutura):
         print("A lista agora tem o tamanho {}.".format(len(lista)))
         print("Deseja apagar outro elemento?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             apagar_elem(1)
@@ -130,7 +130,7 @@ def apagar_elem(estrutura):
             print("A pilha agora tem o tamanho {}.".format(stack._size))
             print("Deseja apagar outro elemento?")
             print("1- Sim")
-            print("2- Voltar para o menu principal")
+            print("2- Não. Voltar para o menu principal")
             escolha = int(input())
             if escolha == 1:
                 apagar_elem(2)
@@ -153,7 +153,7 @@ def editar_elem(estrutura):
         print("A lista agora tem o tamanho {}.".format(len(lista)))
         print("Deseja editar outro elemento?")
         print("1- Sim")
-        print("2- Voltar para o menu principal")
+        print("2- Não. Voltar para o menu principal")
         escolha = int(input())
         if escolha == 1:
             editar_elem(1)
@@ -176,7 +176,7 @@ def editar_elem(estrutura):
             print("A pilha agora tem o tamanho {}.".format(stack._size))
             print("Deseja editar outro elemento?")
             print("1- Sim")
-            print("2- Voltar para o menu principal")
+            print("2- Não. Voltar para o menu principal")
             escolha = int(input())
             if escolha == 1:
                 editar_elem(2)
@@ -199,7 +199,7 @@ with open('metadata.csv', encoding="utf-8") as csv_file:
     numero_de_linhas = i
 
     data = ""
-    for i in range(1):
+    for i in range(100):
         csv_file.seek(0)
         linha_sorteada = random.randint(0, numero_de_linhas)-1
         coluna_sorteada = random.randint(0, numero_coluna)-1
