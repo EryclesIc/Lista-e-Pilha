@@ -4,6 +4,7 @@ from node import Node
 
 
 class LinkedList:
+    # função contrutora, define como a lista vai ser por padrão
     def __init__(self):
         self.head = None
         self._size = 0
@@ -67,3 +68,32 @@ class LinkedList:
             pointer = pointer.next
             i += 1
         raise ValueError("{} is not in list".format(elem))
+
+    def remove(self, elem):
+        if self.head is None:
+            raise ValueError("{} is not in list".format(elem))
+        elif self.head.data == elem:
+            self.head = self.head.next
+            return True
+        else:
+            ancestor = self.head
+            pointer = self.head.next
+            while(pointer):
+                if pointer.data == elem:
+                    ancestor.next = pointer.next
+                    pointer.next = None
+                ancestor = pointer
+                pointer = pointer.next
+            return True
+        raise ValueError("{} is not in list".format(elem))
+
+    def __repr__(self):
+        r = ""
+        pointer = self.head
+        while pointer:
+            r = r + str(pointer.data) + "-->"
+            pointer = pointer.next
+        return r
+
+    def __str__(self):
+        return self.__repr__()
