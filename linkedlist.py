@@ -1,6 +1,4 @@
 from node import Node
-# sequencial = []
-# sequencial.append(7)
 
 
 class LinkedList:
@@ -25,16 +23,7 @@ class LinkedList:
         """Retorna o tamanho da lista"""
         return self._size
 
-    def get(self, index):
-        # a = lista.get(6)
-        pass
-
-    def set(self, index, elem):
-        # lista.set(5, 9)
-        pass
-
     def __getitem__(self, index):
-        # a = lista[5]
         pointer = self.head
         for i in range(index):
             if pointer:
@@ -46,7 +35,6 @@ class LinkedList:
         raise IndexError("list index out of range")
 
     def __setitem__(self, index, elem):
-        # lista[5] = 9
         pointer = self.head
         for i in range(index):
             if pointer:

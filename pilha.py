@@ -28,7 +28,6 @@ class Stack:
             return self.top.data
         raise IndexError("The stack is empty")
 
-
 # stack = Stack()
 # stack.push(1)
 # stack.push(2)
