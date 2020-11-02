@@ -149,7 +149,7 @@ def editar_elem(estrutura):
         print("Digite o novo elemento:")
         lista[endereco] = input()
         
-        print("O {} foi editado na lista".format(elemento))
+        print("O {} foi editado na lista para {}".format(elemento, lista[endereco]))
         print("A lista agora tem o tamanho {}.".format(len(lista)))
         print("Deseja editar outro elemento?")
         print("1- Sim")
