@@ -23,7 +23,7 @@ class LinkedList:
         """Retorna o tamanho da lista"""
         return self._size
 
-    def __getitem__(self, index):
+    def __getitem__(self, index):  # print(lista[1])
         pointer = self.head
         for i in range(index):
             if pointer:
@@ -34,7 +34,7 @@ class LinkedList:
             return pointer.data
         raise IndexError("list index out of range")
 
-    def __setitem__(self, index, elem):
+    def __setitem__(self, index, elem):  # lista[1] = elem
         pointer = self.head
         for i in range(index):
             if pointer:
