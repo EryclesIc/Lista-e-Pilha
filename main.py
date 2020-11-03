@@ -29,7 +29,6 @@ def menu_listas():
             apagar_elem(1)
         elif escolha == 4:
             editar_elem(1)
-    
     elif escolha == 2:
         print("Tudo bem, qual operação você deseja?")
         print("1- Inserir um novo elemento")
@@ -46,6 +45,7 @@ def menu_listas():
         elif escolha == 4:
             editar_elem(2)
 
+
 def novo_elem(estrutura):
     print("Digite o elemento que deseja adicionar:")
     elemento = input()
@@ -61,7 +61,6 @@ def novo_elem(estrutura):
             novo_elem(1)
         elif escolha == 2:
             menu_listas()
-    
     elif estrutura == 2:
         stack.push(elemento)
         print("O {} foi adicionado a pilha".format(elemento))
@@ -75,6 +74,7 @@ def novo_elem(estrutura):
         elif escolha == 2:
             menu_listas()
 
+
 def visualizar_lista(estrutura):
     if estrutura == 1:
         print(lista)
@@ -87,7 +87,6 @@ def visualizar_lista(estrutura):
             visualizar_lista(1)
         elif escolha == 2:
             menu_listas()
-    
     elif estrutura == 2:
         print(stack)
         print("A pilha agora tem o tamanho {}.".format(stack._size))
@@ -99,6 +98,7 @@ def visualizar_lista(estrutura):
             visualizar_lista(2)
         elif escolha == 2:
             menu_listas()
+
 
 def apagar_elem(estrutura):
     if estrutura == 1:
@@ -116,7 +116,6 @@ def apagar_elem(estrutura):
             apagar_elem(1)
         elif escolha == 2:
             menu_listas()
-    
     elif estrutura == 2:
         print(stack)
         print("Somente o topo da pilha pode ser removido.\nTem certeza que deseja continuar?")
@@ -139,6 +138,7 @@ def apagar_elem(estrutura):
         elif decidir == 2:
             menu_listas()
 
+
 def editar_elem(estrutura):
     if estrutura == 1:
         print(lista)
@@ -159,7 +159,6 @@ def editar_elem(estrutura):
             editar_elem(1)
         elif escolha == 2:
             menu_listas()
-    
     elif estrutura == 2:
         print(stack)
         print("Somente o topo da pilha pode ser editado.\nTem certeza que deseja continuar?")
@@ -184,6 +183,7 @@ def editar_elem(estrutura):
                 menu_listas()
         elif decidir == 2:
             menu_listas()
+
 
 with open('metadata.csv', encoding="utf-8") as csv_file:
 
