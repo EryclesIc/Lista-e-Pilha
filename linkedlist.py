@@ -2,12 +2,12 @@ from node import Node
 
 
 class LinkedList:
-    # função contrutora, define como a lista vai ser por padrão
+    # função construtora que define como a lista vai ser iniciada
     def __init__(self):
         self.head = None
         self._size = 0
 
-    def append(self, elem):
+    def append(self, elem):  # função que adiciona um novo elemento na lista
         if self.head:
             # inserção quando a lista já possui elemento
             pointer = self.head
@@ -23,7 +23,12 @@ class LinkedList:
         """Retorna o tamanho da lista"""
         return self._size
 
-    def __getitem__(self, index):  # print(lista[1])
+    # como a lista não pode ser exibida de forma sequencial,
+    # a função abaixo possibilita que a lista seja exibida
+    # enviando o indice em colchetes assim como a sequencial
+    # é exibida.
+    # ex.: print(lista[1])
+    def __getitem__(self, index):
         pointer = self.head
         for i in range(index):
             if pointer:
@@ -34,7 +39,11 @@ class LinkedList:
             return pointer.data
         raise IndexError("list index out of range")
 
-    def __setitem__(self, index, elem):  # lista[1] = elem
+    # como a lista não pode setar um valor de forma direta pelo indice,
+    # como na lista sequencial, a função abaixo possibiita que a lista set um novo valor
+    # para um nó pelo seu indice, assim como é feito na lista sequencial
+    # ex.: lista[1] = elem
+    def __setitem__(self, index, elem):
         pointer = self.head
         for i in range(index):
             if pointer:
@@ -46,6 +55,7 @@ class LinkedList:
         else:
             raise IndexError("list index out of range")
 
+    # a função abaixo recebe o elemento e ao passar por toda a lista, retorna o indice dele
     def index(self, elem):
         """Retorna o indice do elem na lista"""
         pointer = self.head
@@ -57,6 +67,7 @@ class LinkedList:
             i += 1
         raise ValueError("{} is not in list".format(elem))
 
+    # a função abaixo remove um elemento da lista
     def remove(self, elem):
         if self.head is None:
             raise ValueError("{} is not in list".format(elem))
@@ -75,6 +86,9 @@ class LinkedList:
             return True
         raise ValueError("{} is not in list".format(elem))
 
+    # as funções a baixo possibilitam que a lista seja exibida por completo
+    # printando ela de forma direta
+    # ex.: print(lista)
     def __repr__(self):
         r = ""
         pointer = self.head

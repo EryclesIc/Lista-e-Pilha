@@ -2,6 +2,7 @@ from node import Node
 
 
 class Stack:
+    # função de criação que define como a pilha vai ser iniciada
     def __init__(self):
         self.top = None
         self._size = 0
@@ -27,6 +28,10 @@ class Stack:
         if self._size > 0:
             return self.top.data
         raise IndexError("The stack is empty")
+    
+    # a função a baixo possibilitam que o topo da pilha seja exibido
+    # printando ela de forma direta
+    # ex.: print(pilha)
     def __repr__(self):
         return str(self.top)
 

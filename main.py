@@ -185,6 +185,11 @@ def editar_elem(estrutura):
             menu_listas()
 
 
+# a função open efetua a leitura do arquivo csv
+# após isso é carregado todo o arquivo delimitando pelo \n
+# com isso é calculado o numero de linhas e colunas total do arquivo
+# sorteamos um numero aleatório de linhas e colunas e pegamos os dados de lá
+# e jogamos nas estruturas para manipular esses dados
 with open('metadata.csv', encoding="utf-8") as csv_file:
 
     csv_reader = csv.reader(csv_file, delimiter='\n')
